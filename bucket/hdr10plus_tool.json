@@ -7,12 +7,14 @@
         "64bit": {
             "url": "https://github.com/quietvoid/hdr10plus_tool/releases/download/1.6.0/hdr10plus_tool-1.6.0-x86_64-pc-windows-msvc.zip",
             "hash": "BF86573FCBD62C861216A91B30D4B48F7476246991733344E9BD172541EF85B4",
-            "extract_dir": "hdr10plus_tool"
+            "extract_dir": "hdr10plus_tool-1.6.0-x86_64-pc-windows-msvc"
         }
     },
     "bin": "hdr10plus_tool.exe",
     "checkver": {
-        "github": "https://github.com/quietvoid/hdr10plus_tool"
+        "github": "https://github.com/quietvoid/hdr10plus_tool",
+        "regex": "/(?:[\\d.]+)/hdr10plus_tool-(?<version>[\\d.]+)-x86_64-pc-windows-msvc\\.zip",
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
